@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "version": "1.1",
+    "lastUpdated": "2025-08-30T14:00:00Z",
+    "source": "National Welfare Services API"
+  },
+  "categories": [
+    {
+      "id": "CAT001",
+      "name": "Financial Assistance",
+      "description": "Programs that provide direct monetary or in-kind support."
+    },
+    {
+      "id": "CAT002",
+      "name": "Housing",
+      "description": "Services that provide housing support and rental aid."
+    },
+    {
+      "id": "CAT003",
+      "name": "Healthcare",
+      "description": "Medical, psychiatric, and wellness support programs."
+    },
+    {
+      "id": "CAT004",
+      "name": "Employment & Training",
+      "description": "Programs that provide job placement, retraining, and skill development."
+    },
+    {
+      "id": "CAT005",
+      "name": "Child & Family Welfare",
+      "description": "Support for orphans, foster care, adoption, and child welfare services."
+    }
+  ],
+  "agencies": [
+    {
+      "id": "AG001",
+      "name": "Department of Social Services",
+      "website": "https://dss.gov.example",
+      "contact": {
+        "phone": "+1-800-111-2222",
+        "email": "info@dss.gov.example",
+        "address": "100 Main St, Capital City, USA"
+      }
+    },
+    {
+      "id": "AG002",
+      "name": "Housing Authority",
+      "website": "https://housing.gov.example",
+      "contact": {
+        "phone": "+1-800-333-4444",
+        "email": "help@housing.gov.example",
+        "address": "200 Housing Ave, Capital City, USA"
+      }
+    },
+    {
+      "id": "AG003",
+      "name": "National Mental Health Agency",
+      "website": "https://mentalhealth.gov.example",
+      "contact": {
+        "phone": "+1-800-777-9999",
+        "email": "support@mentalhealth.gov.example",
+        "address": "500 Wellness Blvd, Capital City, USA"
+      }
+    },
+    {
+      "id": "AG004",
+      "name": "Child & Family Services",
+      "website": "https://children.gov.example",
+      "contact": {
+        "phone": "+1-800-123-4567",
+        "email": "care@children.gov.example",
+        "address": "300 ChildCare St, Capital City, USA"
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "LOC001",
+      "city": "Capital City",
+      "state": "CA",
+      "country": "USA",
+      "postalCode": "90001",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    {
+      "id": "LOC002",
+      "city": "Riverside",
+      "state": "CA",
+      "country": "USA",
+      "postalCode": "92501",
+      "latitude": 33.9533,
+      "longitude": -117.3961
+    }
+  ],
+  "services": [
+    {
+      "id": "SRV001",
+      "name": "Unemployment Benefits",
+      "categoryId": "CAT001",
+      "agencyId": "AG001",
+      "locationIds": ["LOC001", "LOC002"],
+      "description": "Provides temporary financial assistance to individuals who have lost their jobs.",
+      "eligibility": {
+        "age": "18+",
+        "residency": "Must be a legal resident",
+        "employmentStatus": "Unemployed or laid off"
+      },
+      "application": {
+        "methods": ["online", "in-person"],
+        "onlineUrl": "https://apply.gov.example/unemployment",
+        "documentsRequired": [
+          "Government-issued ID",
+          "Proof of employment separation",
+          "Bank account details"
+        ],
+        "processingTime": "2-4 weeks"
+      }
+    },
+    {
+      "id": "SRV002",
+      "name": "Affordable Housing Assistance",
+      "categoryId": "CAT002",
+      "agencyId": "AG002",
+      "locationIds": ["LOC001"],
+      "description": "Helps low-income families and individuals access safe and affordable housing.",
+      "eligibility": {
+        "income": "Household income below $35,000 annually",
+        "familyStatus": "Single parents, seniors, low-income households"
+      },
+      "application": {
+        "methods": ["in-person"],
+        "officeLocation": "200 Housing Ave, Capital City",
+        "documentsRequired": [
+          "Proof of income",
+          "Residency proof"
+        ],
+        "processingTime": "4-6 weeks"
+      }
+    },
+    {
+      "id": "SRV003",
+      "name": "Mental Health Counseling",
+      "categoryId": "CAT003",
+      "agencyId": "AG003",
+      "locationIds": ["LOC001", "LOC002"],
+      "description": "Free or low-cost counseling services for individuals experiencing stress, anxiety, or depression.",
+      "eligibility": {
+        "age": "12+",
+        "residency": "Open to all residents",
+        "specialConditions": "Priority given to low-income households"
+      },
+      "application": {
+        "methods": ["phone", "in-person"],
+        "appointmentRequired": true,
+        "documentsRequired": ["ID proof"],
+        "processingTime": "1 week"
+      }
+    },
+    {
+      "id": "SRV004",
+      "name": "Psychiatric Patient Care & Rehabilitation",
+      "categoryId": "CAT003",
+      "agencyId": "AG003",
+      "locationIds": ["LOC001"],
+      "description": "Specialized treatment, medication management, and rehabilitation for individuals with psychiatric conditions.",
+      "eligibility": {
+        "age": "18+",
+        "diagnosis": "Must have a documented psychiatric condition",
+        "residency": "Legal residents only"
+      },
+      "application": {
+        "methods": ["referral", "in-person"],
+        "referralSources": ["Primary care physician", "Emergency department", "Community clinic"],
+        "documentsRequired": [
+          "Medical diagnosis documents",
+          "ID proof",
+          "Insurance or financial aid application"
+        ],
+        "processingTime": "Immediate for emergencies, 1-2 weeks for regular care"
+      }
+    },
+    {
+      "id": "SRV005",
+      "name": "Orphan Support & Foster Care Placement",
+      "categoryId": "CAT005",
+      "agencyId": "AG004",
+      "locationIds": ["LOC001", "LOC002"],
+      "description": "Provides housing, education, healthcare, and foster family placement for orphans.",
+      "eligibility": {
+        "age": "0-18",
+        "status": "Must be without parental care (orphaned, abandoned, or in state custody)"
+      },
+      "application": {
+        "methods": ["social worker referral", "in-person"],
+        "documentsRequired": [
+          "Birth certificate (if available)",
+          "Death certificates of parents (if applicable)",
+          "Court or social service documentation"
+        ],
+        "processingTime": "Varies (emergency placement available)"
+      }
+    },
+    {
+      "id": "SRV006",
+      "name": "Educational Scholarships for Orphans",
+      "categoryId": "CAT005",
+      "agencyId": "AG004",
+      "locationIds": ["LOC001"],
+      "description": "Covers tuition fees, books, and living expenses for orphaned children pursuing primary, secondary, or higher education.",
+      "eligibility": {
+        "age": "6-21",
+        "status": "Orphaned or in state-supported foster care",
+        "academicRequirement": "Must be enrolled in an accredited institution"
+      },
+      "application": {
+        "methods": ["online", "in-person"],
+        "onlineUrl": "https://children.gov.example/scholarships",
+        "documentsRequired": [
+          "Proof of orphan status",
+          "School admission/attendance letter",
+          "Academic records"
+        ],
+        "processingTime": "2-3 weeks"
+      }
+    }
+  ]
+}
